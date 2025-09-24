@@ -1,6 +1,46 @@
-<iframe
- src="https://udify.app/chatbot/QE2BqfqPB4aWfe1G"
- style="width: 100%; height: 100%; min-height: 700px"
- frameborder="0"
- allow="microphone">
-</iframe>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <style>
+        /* コンテナとiframeが親要素いっぱいに広がるように設定 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* スクロールバーを非表示に */
+        }
+        #chatbot-container, #chatbot-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* iframeの枠線を消す */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- iframeを挿入するための空のdivを用意 -->
+    <div id="chatbot-container"></div>
+
+    <script>
+        // この関数はページの読み込みが完了したときに実行される
+        document.addEventListener('DOMContentLoaded', function() {
+            // トークンをJavaScript変数として定義
+            const chatbotToken = 'QE2BqfqPB4aWfe1G';
+            
+            // iframe要素を動的に作成
+            const iframe = document.createElement('iframe');
+            
+            // 属性を設定
+            iframe.src = `https://udify.app/chatbot/${chatbotToken}`;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'microphone');
+            
+            // HTMLの#chatbot-containerの中に作成したiframeを追加
+            document.getElementById('chatbot-container').appendChild(iframe);
+        });
+    </script>
+
+</body>
+</html>
