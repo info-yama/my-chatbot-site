@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>Dify Chatbot 中央表示</title>
-  <style>
-    /* バブルを非表示にして中央固定のウィンドウを作る */
-    #dify-chatbot-bubble-button {
-      display: none !important;
-    }
-
-    #dify-chatbot-bubble-window {
-      position: fixed !important;
-      top: 50% !important;
-      left: 50% !important;
-      transform: translate(-50%, -50%) !important; /* 完全中央 */
-      width: 400px !important;   /* 好きなサイズに変更可能 */
-      height: 600px !important;  /* 好きなサイズに変更可能 */
-      z-index: 9999 !important;  /* 最前面に表示 */
-      border-radius: 10px !important;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3) !important;
-    }
-  </style>
-</head>
-<body>
-  <script>
-    window.difyChatbotConfig = {
-      token: 'QE2BqfqPB4aWfe1G', // Dify 管理画面の埋め込みトークン
-    }
-  </script>
-
-  <script src="https://udify.app/embed.min.js" defer></script>
-</body>
-</html>
+<iframe
+ src="https://udify.app/chatbot/QE2BqfqPB4aWfe1G"
+ style="width: 100%; height: 100%; min-height: 700px"
+ frameborder="0"
+ allow="microphone">
+</iframe>
