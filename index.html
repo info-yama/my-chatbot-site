@@ -2,14 +2,30 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Dify Chatbot</title>
+  <title>Dify Chatbot 中央表示</title>
+  <style>
+    /* バブルを非表示にして中央固定のウィンドウを作る */
+    #dify-chatbot-bubble-button {
+      display: none !important;
+    }
+
+    #dify-chatbot-bubble-window {
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important; /* 完全中央 */
+      width: 400px !important;   /* 好きなサイズに変更可能 */
+      height: 600px !important;  /* 好きなサイズに変更可能 */
+      z-index: 9999 !important;  /* 最前面に表示 */
+      border-radius: 10px !important;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3) !important;
+    }
+  </style>
 </head>
 <body>
-  <!-- ここには他のコンテンツはなし -->
-
   <script>
     window.difyChatbotConfig = {
-      token: 'QE2BqfqPB4aWfe1G', // Dify 管理画面から発行されたトークン
+      token: 'QE2BqfqPB4aWfe1G', // Dify 管理画面の埋め込みトークン
     }
   </script>
 
